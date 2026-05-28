@@ -1,70 +1,213 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="color-scheme" content="light dark">
-  <meta name="robots" content="noindex, nofollow">
-  <title>Support Inquiry Web</title>
 
-  <link rel="stylesheet" href="supportWeb.css">
-  <link rel="icon" type="image/svg+xml" href="fansly_logo.png">
+  <title>Fansly Support Training Tools</title>
+
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="color-scheme" content="light dark">
+
+  <link rel="icon" type="image/svg+xml" href="./assets/fansly_logo.png">
+
+  <style>
+    :root {
+      --primary: rgb(31, 137, 187);
+      --primary-light: rgb(56, 172, 209);
+
+      --bg: #f7f9fc;
+      --card: white;
+      --text: #1d2a35;
+      --muted: #607080;
+      --border: #d8e1ea;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+
+    .page {
+      max-width: 1100px;
+      margin: auto;
+      padding: 60px 24px;
+    }
+
+    .hero {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .hero-logo {
+      width: 72px;
+      height: 72px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      margin: 0;
+      font-size: 42px;
+      line-height: 1.1;
+    }
+
+    .hero p {
+      margin-top: 16px;
+      font-size: 18px;
+      color: var(--muted);
+    }
+
+    .tool-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .tool-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      padding: 28px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+
+      transition:
+        transform 0.18s ease,
+        box-shadow 0.18s ease,
+        border-color 0.18s ease;
+    }
+
+    .tool-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--primary-light);
+      box-shadow: 0 18px 38px rgba(0, 0, 0, 0.10);
+    }
+
+    .tool-icon {
+      font-size: 38px;
+      margin-bottom: 18px;
+    }
+
+    .tool-card h2 {
+      margin: 0 0 12px 0;
+      font-size: 24px;
+    }
+
+    .tool-card p {
+      margin: 0 0 24px 0;
+      line-height: 1.6;
+      color: var(--muted);
+    }
+
+    .tool-button {
+      display: inline-block;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-weight: bold;
+
+      transition:
+        background 0.18s ease,
+        transform 0.18s ease;
+    }
+
+    .tool-button:hover {
+      background: var(--primary-light);
+      transform: scale(1.02);
+    }
+
+    .footer {
+      margin-top: 70px;
+      text-align: center;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #10161d;
+        --card: #18212b;
+        --text: #f3f7fb;
+        --muted: #9fb2c3;
+        --border: #2a3947;
+      }
+
+      .tool-card {
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.28);
+      }
+
+      .tool-card:hover {
+        box-shadow: 0 18px 40px rgba(0, 0, 0, 0.42);
+      }
+    }
+  </style>
 </head>
 
 <body>
-  <h1>Support Inquiry Web</h1>
-  <p>Move the "spider" toward the pillar that best fits the scenario.</p>
 
-  <div class="web" id="web">
+  <div class="page">
 
-    <svg class="radar-fill" viewBox="0 0 700 700">
-      <polygon id="radarShape" points="" />
-    </svg>
+    <section class="hero">
+      <img
+        class="hero-logo"
+        src="./assets/fansly.svg"
+        alt="Fansly Logo"
+      >
 
-    <div class="spoke" style="transform: rotate(0deg);"></div>
-    <div class="spoke" style="transform: rotate(45deg);"></div>
-    <div class="spoke" style="transform: rotate(90deg);"></div>
-    <div class="spoke" style="transform: rotate(135deg);"></div>
-    <div class="spoke" style="transform: rotate(180deg);"></div>
-    <div class="spoke" style="transform: rotate(225deg);"></div>
-    <div class="spoke" style="transform: rotate(270deg);"></div>
-    <div class="spoke" style="transform: rotate(315deg);"></div>
+      <h1>Support Training Tools</h1>
 
-    <div class="label trust-label" 
-         data-tooltip="Examples: model release, applications, banned accounts"
-         data-category="trust">Trust & Safety</div>
-    <div class="label account-label" 
-         data-tooltip="Examples: compromised accounts, account restoration, username or email changes, locating lost accounts"
-         data-category="account">Account Changes</div>
-    <div class="label billing-label" 
-         data-tooltip="Examples: payment issues, delayed transactions, refund requests"
-         data-category="billing">Billing</div>
-    <div class="label payouts-label" 
-         data-tooltip="Examples: invoice requests, payout method inquiries, delayed payouts"
-         data-category="payouts">Payouts</div>
-    <div class="label technical-label" 
-         data-tooltip="Examples: troubleshooting, how a feature works, intended behavior"
-         data-category="technical">Technical/How To</div>
-    <div class="label creator-label" 
-         data-tooltip="Examples: partnership inquiries, marketing related"
-         data-category="creator">Creator Success</div>
-    <div class="label privacy-label" 
-         data-tooltip="Examples: DMCA, delete my data, copy of data"
-         data-category="privacy">Privacy</div>
-    <div class="label legal-label" 
-         data-tooltip="Examples: law enforcement requests, allegations of discrimination"
-         data-category="legal">Legal</div>
+      <p>
+        Interactive visual tools for support decision-making,
+        troubleshooting, escalation guidance, and training.
+      </p>
+    </section>
 
-    <div class="center"></div>
-    <div id="spider">💙</div>
+    <section class="tool-grid">
+
+      <div class="tool-card">
+        <div class="tool-icon">🕸️</div>
+
+        <h2>Specialty Routing Web</h2>
+
+        <p>
+        </p>
+
+        <a
+          class="tool-button"
+          href="./inquiry-routing/"
+        >
+          Open Tool
+        </a>
+      </div>
+
+      <div class="tool-card">
+        <div class="tool-icon">🧩</div>
+
+        <h2>Troubleshooting Web</h2>
+
+        <p>
+        </p>
+
+        <a
+          class="tool-button"
+          href="./troubleshooting/"
+        >
+          Open Tool
+        </a>
+      </div>
+
+    </section>
+
+    <div class="footer">
+      Internal Training Resource
+    </div>
+
   </div>
 
-  <br>
-  <br>
-  <br>
-
-  <button class="reset-button" onclick="resetMarker()">Reset</button>
-
-  <script src="supportWeb.js"></script>
 </body>
 </html>

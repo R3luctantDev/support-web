@@ -1,0 +1,265 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f7fb;
+    text-align: center;
+}
+
+.web {
+    position: relative;
+    width: 700px;
+    height: 700px;
+    margin: 30px auto;
+    border-radius: 50%;
+    background:
+    radial-gradient(circle, transparent 12%, #ccc 13%, transparent 14%),
+    radial-gradient(circle, transparent 27%, #ccc 28%, transparent 29%),
+    radial-gradient(circle, transparent 42%, #ccc 43%, transparent 44%),
+    radial-gradient(circle, transparent 57%, #ccc 58%, transparent 59%),
+    radial-gradient(circle, transparent 72%, #ccc 73%, transparent 74%);
+}
+
+.spoke {
+    position: absolute;
+    width: 2px;
+    height: 340px;
+    background: #bbb;
+    left: 349px;
+    top: 10px;
+    transform-origin: bottom center;
+    z-index: 0;
+}
+
+.label {
+    position: absolute;
+    font-weight: bold;
+    background: rgb(31, 137, 187);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 12px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    cursor: default;
+    transition: transform 0.15s ease;
+    z-index: 3;
+}
+
+.label:hover {
+    transform: scale(1.03);
+}
+
+/* CUSTOM TOOLTIP */
+.label::after {
+    content: attr(data-tooltip);
+    position: absolute;
+
+    width: 220px;
+    padding: 10px 12px;
+
+    background: white;
+    color: rgb(31, 137, 187);
+
+    border-radius: 12px;
+    border: 2px solid rgb(31, 137, 187);
+
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 1.4;
+
+    opacity: 0;
+    pointer-events: none;
+
+    transition: opacity 0.2s ease;
+
+    z-index: 1000;
+
+    top: 115%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* SHOW TOOLTIP ON HOVER */
+.label:hover::after {
+    opacity: 1;
+}
+
+.label.level-1 {
+    background: rgb(96, 181, 216);
+}
+
+.label.level-2 {
+    background: rgb(31, 137, 187);
+    box-shadow: 0 0 0 3px rgba(31, 137, 187, 0.20);
+}
+
+.label.level-3 {
+    background: rgb(18, 95, 132);
+    box-shadow: 0 0 0 4px rgba(31, 137, 187, 0.30);
+}
+
+.label.level-4 {
+  background: rgb(10, 65, 95);
+  box-shadow:
+    0 0 0 4px rgba(31, 137, 187, 0.35),
+    0 0 18px rgba(31, 137, 187, 0.45);
+}
+
+.login-label {
+  top: -5px;
+  left: 315px;
+}
+
+.display-label {
+  top: 30px;
+  right: 155px;
+}
+
+.stats-label {
+  top: 95px;
+  right: 35px;
+}
+
+.fyp-label {
+  top: 220px;
+  right: -65px;
+}
+
+.live-label {
+  top: 370px;
+  right: -95px;
+}
+
+.media-label {
+  bottom: 155px;
+  right: -80px;
+}
+
+.uploads-label {
+  bottom: 55px;
+  right: 74px;
+}
+
+.posts-label {
+  bottom: -5px;
+  right: 225px;
+}
+
+.apps-label {
+  bottom: -5px;
+  left: 205px;
+}
+
+.messaging-label {
+  top: 220px;
+  left: -65px;
+}
+
+.notifs-label {
+  bottom: 160px;
+  left: -10px;
+}
+
+.emails-label {
+  bottom: 300px;
+  left: -55px;
+}
+
+.money-label {
+  bottom: 55px;
+  left: 40px;
+}
+
+.management-label {
+  top: 100px;
+  left: -70px;
+}
+
+.nonFansly-label {
+  top: 30px;
+  left: 130px;
+}
+
+#spider {
+    position: absolute;
+    font-size: 38px;
+    cursor: grab;
+    left: 331px;
+    top: 325px;
+    user-select: none;
+    z-index: 4;
+}
+
+.center {
+    position: absolute;
+    left: 285px;
+    top: 335px;
+    color: #666;
+    font-size: 14px;
+}
+
+.reset-button{
+    background-color: rgb(56, 172, 209);
+    border: none;
+    color: white;
+    font-size: 18px;
+    padding: 0.40em .70em;
+}
+
+.radar-fill {
+    position: absolute;
+    inset: 0;
+    width: 700px;
+    height: 700px;
+    pointer-events: none;
+    z-index: 1;
+}
+
+#radarShape {
+    fill: rgba(31, 137, 187, 0.28);
+    stroke: rgb(31, 137, 187);
+    stroke-width: 3;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #121820;
+    color: #f3f7fb;
+  }
+
+  .web {
+    background:
+      radial-gradient(circle, transparent 12%, #3c4a57 13%, transparent 14%),
+      radial-gradient(circle, transparent 27%, #3c4a57 28%, transparent 29%),
+      radial-gradient(circle, transparent 42%, #3c4a57 43%, transparent 44%),
+      radial-gradient(circle, transparent 57%, #3c4a57 58%, transparent 59%),
+      radial-gradient(circle, transparent 72%, #3c4a57 73%, transparent 74%);
+  }
+
+  .spoke {
+    background: #3c4a57;
+  }
+
+  .label {
+    background: rgb(56, 172, 209);
+    color: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  }
+
+  .label::after {
+    background: #1c2630;
+    color: #f3f7fb;
+    border-color: rgb(56, 172, 209);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+  }
+
+  .reset-button {
+    background-color: rgb(56, 172, 209);
+    color: white;
+    border-radius: 12px;
+  }
+
+  #radarShape {
+    fill: rgba(56, 172, 209, 0.26);
+    stroke: rgb(56, 172, 209);
+  }
+}
