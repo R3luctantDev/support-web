@@ -98,6 +98,8 @@ function evaluateSpamSignals() {
   const hasRequest = document.getElementById("hasRequest").checked;
   const requestText = document.getElementById("requestText").value;
   const relatedToFansly = document.getElementById("relatedToFansly").checked;
+  const hasErrors = document.getElementById("hasErrors").checked;
+  const hasUrgency = document.getElementById("hasUrgency").checked;
   const result = document.getElementById("finalResult");
 
   let signals = [];
@@ -116,6 +118,14 @@ function evaluateSpamSignals() {
 
   if (hasRequest && !relatedToFansly) {
     signals.push("The request may not be related to Fansly or the industry.");
+  }
+
+  if (hasErrors) {
+    signals.push("Repeated or significant spelling/grammar errors often signal spam or phishing.");
+  }
+
+  if (hasUrgency) {
+    signals.push("Messages that press for quick action may be a sign someone doesn't want you to think very hard about the request.");
   }
 
   if (signals.length === 0) {
