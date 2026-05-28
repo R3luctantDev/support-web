@@ -1,0 +1,35 @@
+.tool-nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 24px;
+  font-family: Arial, sans-serif;
+}
+
+.tool-nav label {
+  font-weight: bold;
+  color: #607080;
+}
+
+.tool-nav select {
+  background: white;
+  color: #1d2a35;
+  border: 1px solid #d8e1ea;
+  border-radius: 10px;
+  padding: 8px 12px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+@media (prefers-color-scheme: dark) {
+  .tool-nav label {
+    color: #9fb2c3;
+  }
+
+  .tool-nav select {
+    background: #18212b;
+    color: #f3f7fb;
+    border-color: #2a3947;
+  }
+}
