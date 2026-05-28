@@ -220,6 +220,7 @@ body {
   .reset-button {
     background-color: rgb(56, 172, 209);
     color: white;
+    border-radius: 12px;
   }
 
   #radarShape {
