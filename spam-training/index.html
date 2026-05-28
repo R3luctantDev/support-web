@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spam Identifier</title>
+
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="color-scheme" content="light dark">
+
+  <link rel="icon" type="image/svg+xml" href="../assets/fansly.svg">
+  <link rel="stylesheet" href="../shared/shared.css">
+  <link rel="stylesheet" href="./spam-identifier.css">
+</head>
+
+<body>
+  <div id="toolNav"></div>
+
+  <main class="spam-page">
+    <section class="spam-card">
+        <h1>Spam Identifier Trainer</h1>
+
+        <p class="intro-text">
+        Review the signals below to decide whether the outreach looks relevant,
+        actionable, and connected to Fansly or the industry.
+        </p>
+
+        <div class="signal-section">
+        <div class="signal-pill">Sender Clues</div>
+
+        <label for="companyName">Company name</label>
+        <input id="companyName" type="text">
+
+        <label for="emailDomain">Email domain</label>
+        <input id="emailDomain" type="text">
+
+        <button class="action-button" type="button" onclick="checkCompanyDomain()">
+            Compare Company + Domain
+        </button>
+
+        <div id="domainResult" class="result-box"></div>
+        </div>
+
+        <div class="signal-section">
+        <div class="signal-pill">Request Clues</div>
+
+        <label class="checkbox-row">
+            <input id="hasRequest" type="checkbox" onchange="toggleRequestField()">
+            Is there a specific, actionable request?
+        </label>
+
+        <div id="requestSection" class="hidden">
+            <label for="requestText">What is the request?</label>
+            <textarea id="requestText"></textarea>
+
+            <label class="checkbox-row">
+            <input id="relatedToFansly" type="checkbox">
+            The request is related to Fansly or the industry
+            </label>
+        </div>
+        </div>
+
+        <button class="reset-button" type="button" onclick="evaluateSpamSignals()">
+        Evaluate Signals
+        </button>
+
+        <div id="finalResult" class="result-box"></div>
+    </section>
+    </main>
+
+  <script src="../shared/nav.js"></script>
+  <script src="./spam-identifier.js"></script>
+</body>
+</html>
