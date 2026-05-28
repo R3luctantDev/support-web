@@ -1,0 +1,223 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f7fb;
+    text-align: center;
+}
+
+.page {
+  max-width: 860px;
+  margin: auto;
+  padding: 40px 24px 70px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.card h1 {
+  margin-top: 0;
+  font-size: 36px;
+}
+
+.spam-page {
+  max-width: 850px;
+  margin: 30px auto;
+  padding: 0 20px 60px;
+}
+
+.spam-card {
+  background: white;
+  border-radius: 22px;
+  padding: 28px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  text-align: left;
+}
+
+.spam-card h1 {
+  text-align: center;
+  margin-top: 0;
+}
+
+.intro-text {
+  text-align: center;
+  color: #666;
+  line-height: 1.5;
+}
+
+.signal-section {
+  margin-top: 24px;
+  padding: 20px;
+  border: 2px solid rgba(31, 137, 187, 0.18);
+  border-radius: 18px;
+  background: rgba(31, 137, 187, 0.04);
+}
+
+.signal-pill {
+  display: inline-block;
+
+  background: rgba(31, 137, 187, 0.12);
+  color: rgb(18, 95, 132);
+
+  border: none;
+
+  font-weight: bold;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  font-size: 22px;
+
+  padding: 6px 12px;
+  border-radius: 999px;
+
+  margin-bottom: 14px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  color: #1d2a35;
+  margin-top: 16px;
+}
+
+.spam-card input,
+.spam-card textarea,
+.spam-card select {
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 8px;
+  padding: 11px 12px;
+  border: 2px solid rgba(31, 137, 187, 0.20);
+  border-radius: 12px;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+}
+
+textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.checkbox-row input {
+  width: auto;
+  margin-top: 3px;
+}
+
+.action-button,
+.reset-button {
+  background-color: rgb(56, 172, 209);
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding: 0.40em .70em;
+  border-radius: 12px;
+  cursor: pointer;
+  margin-top: 18px;
+}
+
+.action-button:hover,
+.reset-button:hover {
+  background: rgb(31, 137, 187);
+}
+
+.result-box {
+  margin-top: 18px;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 2px solid rgb(31, 137, 187);
+  background: white;
+  color: rgb(31, 137, 187);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  line-height: 1.5;
+}
+
+.result-box:empty {
+  display: none;
+}
+
+.result-box.warning {
+  border-color: rgb(18, 95, 132);
+  color: rgb(18, 95, 132);
+  background: rgba(31, 137, 187, 0.08);
+}
+
+.result-box.positive {
+  border-color: rgb(96, 181, 216);
+  color: rgb(18, 95, 132);
+  background: rgba(96, 181, 216, 0.14);
+}
+
+.hidden {
+  display: none;
+}
+
+.tool-nav select {
+  width: auto;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #121820;
+    color: #f3f7fb;
+  }
+
+  .spam-card {
+    background: #1c2630;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+  }
+
+  .intro-text {
+    color: #c9d6e2;
+  }
+
+  .signal-section {
+    background: rgba(56, 172, 209, 0.08);
+    border-color: rgba(56, 172, 209, 0.30);
+  }
+
+  .signal-pill {
+    background: rgba(56, 172, 209, 0.14);
+    color: #d8f1fb;
+    border-color: rgba(56, 172, 209, 0.38);
+  }
+
+  label {
+    color: #f3f7fb;
+  }
+
+  input,
+  textarea,
+  select {
+    background: #121820;
+    color: #f3f7fb;
+    border-color: #3c4a57;
+  }
+
+  .result-box {
+    background: #1c2630;
+    color: #f3f7fb;
+    border-color: rgb(56, 172, 209);
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+  }
+
+  .result-box.warning {
+    color: #f3f7fb;
+    border-color: rgb(56, 172, 209);
+    background: rgba(56, 172, 209, 0.12);
+  }
+
+  .result-box.positive {
+    color: #f3f7fb;
+    border-color: rgb(96, 181, 216);
+    background: rgba(56, 172, 209, 0.18);
+  }
+}
