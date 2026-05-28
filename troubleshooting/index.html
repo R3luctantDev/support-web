@@ -8,9 +8,20 @@
 
   <link rel="stylesheet" href="tsWeb.css">
   <link rel="icon" type="image/svg+xml" href="../assets/fansly_logo.png">
+  <link rel="stylesheet" href="../shared/shared.css">
 </head>
 
 <body>
+  <nav class="tool-nav">
+    <label for="toolSelect">Training tool:</label>
+
+    <select id="toolSelect" onchange="goToTool(this.value)">
+        <option value="/">Landing Page</option>
+        <option value="/inquiry-routing/">Inquiry Routing Web</option>
+        <option value="/troubleshooting/">Troubleshooting Web</option>
+    </select>
+    </nav>
+  
   <h1>Troubleshooting Web</h1>
   <p>Move the "spider" toward the concept that best fits the scenario.</p>
 
@@ -93,6 +104,7 @@
   <button class="reset-button" onclick="resetMarker()">Reset</button>
 
   <script src="tsWeb.js"></script>
+  <script src="../shared/nav.js"></script>
 </body>
 </html>
 
