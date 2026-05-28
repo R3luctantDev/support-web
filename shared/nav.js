@@ -10,7 +10,7 @@ const tools = [
     path: "/trainings/"
   },
   {
-    name: "Inquiry Routing Web",
+    name: "Routing Web",
     path: "/trainings/inquiry-routing/"
   },
   {
